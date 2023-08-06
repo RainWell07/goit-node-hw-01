@@ -36,6 +36,7 @@ async function invokeAction({ action, id, name, email, phone }) {
     case 'remove':
       const removedContact = await contacts.removeContact(id);
       console.log("You sucessfully removed this contact: ")
+      console.log("IMPORTANT, if you see a `null`, it means that nothing found for your query! Check your ID and try again!");
       console.log(removedContact);
       break;
 
